@@ -1,16 +1,19 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 func main() {
-	nums := []int{2, 7, 11, 15}
-	target := 9
+	nums := []int{2, 3, 4}
+	target := 6
 
-	value1, value2, err := TwoSum(nums, target)
+	index1, index2, err := TwoSum(nums, target)
 	if err != nil {
-		fmt.Println("Failed to find solutiobn")
+		fmt.Println("Failed to find solution")
 	} else {
-		fmt.Printf("Solution is %v and %v\n", value1, value2)
+		fmt.Printf("Solution is %v and %v\n", index1, index2)
 	}
 }
 
@@ -21,18 +24,39 @@ func (err Error) Error() string {
 	return "No solutions found!"
 }
 
-func TwoSum(nums []int, target int) (value1 int, value2 int, err error) {
-	value1 = 0
-	value2 = len(nums) - 1
-	for value1 != value2 {
-		sum := nums[value1] + nums[value2]
+// - int with index
+type IntIndex struct {
+	val int
+	idx int
+}
+
+func ToIntIndex (arr []int) (res []IntIndex) {
+	res = make([]IntIndex, len(arr))
+	for i, val := range arr {
+		res[i] = IntIndex{val: val, idx: i}
+	}
+	return
+}
+
+
+func TwoSum(nums []int, target int) (index1 int, index2 int, err error) {
+	
+	numsi := ToIntIndex(nums)
+	sort.Slice(numsi, func (i, j int) bool {
+		return numsi[i].val < numsi[j].val
+	})
+	
+	index1 = 0
+	index2 = len(numsi) - 1
+	for index1 != index2 {
+		sum := numsi[index1].val + numsi[index2].val
 		if sum > target {
-			value2 -= 1
+			index2 -= 1
 		} else if sum < target {
-			value1 += 1
+			index1 += 1
 		} else {
-			value1 = nums[value1]
-			value2 = nums[value2]
+			index1 = numsi[index1].idx
+			index2 = numsi[index2].idx
 			return
 		}
 	}
