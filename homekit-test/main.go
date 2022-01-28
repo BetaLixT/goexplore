@@ -1,9 +1,12 @@
 package main
 
 import (
+	"log"
+	"os"
+
 	"github.com/brutella/hc"
 	"github.com/brutella/hc/accessory"
-	"log"
+	"github.com/mdp/qrterminal/v3"
 )
 
 func turnLightOn() {
@@ -15,14 +18,19 @@ func turnLightOff() {
 }
 
 func main() {
-	info := accessory.Info{
+
+	bridge := accessory.NewBridge(accessory.Info{
+		Name: "HK Test Bridge",
+		Manufacturer: "BetaLixT",
+		ID: 1,
+	})
+	bulb := accessory.NewLightbulb(accessory.Info{
 		Name:         "Test Light Bulb",
 		Manufacturer: "BetaLixT",
-	}
+		ID: 2,
+	})
 
-	acc := accessory.NewLightbulb(info)
-
-	acc.Lightbulb.On.OnValueRemoteUpdate(func(on bool) {
+	bulb.Lightbulb.On.OnValueRemoteUpdate(func(on bool) {
 		if on {
 			turnLightOn()
 		} else {
@@ -30,7 +38,7 @@ func main() {
 		}
 	})
 
-	t, err := hc.NewIPTransport(hc.Config{Pin: "32191143"}, acc.Accessory)
+	t, err := hc.NewIPTransport(hc.Config{Pin: "32193243"}, bridge.Accessory, bulb.Accessory)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -38,6 +46,14 @@ func main() {
 	hc.OnTermination(func() {
 		<-t.Stop()
 	})
+
+	pUri, err := t.XHMURI()
+	if err != nil {
+		log.Fatal("Failed to generate xhmuri")
+		log.Fatal(err)
+	} else {
+		qrterminal.Generate(pUri, qrterminal.L, os.Stdout)
+	}
 
 	t.Start()
 }
