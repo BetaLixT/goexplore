@@ -1,4 +1,4 @@
-module viper-hello
+module viperhello
 
 go 1.17
 

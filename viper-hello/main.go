@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/spf13/viper"
+	"viperhello/options"
 )
 
 func main() {
@@ -10,6 +11,14 @@ func main() {
 	loadConfig()
 	
 	fmt.Println(viper.GetString("TestConfigKey"))
+
+	var s options.SampleOption
+	err := viper.Sub("SampleOption").Unmarshal(&s)
+	if err != nil {
+		fmt.Printf("[ERR] Failed to unmarshal SampleOption: %v", err)
+	} else {
+		fmt.Printf("Sample options: %v %v\n", s.ConfigInt, s.ConfigString)
+	}
 }
 
 func loadConfig() {
