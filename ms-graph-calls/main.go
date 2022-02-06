@@ -4,6 +4,7 @@ import (
 )
 
 func main(){
+	
 	cred, err := azidentity.NewClientSecretCredential(
 		
 	)
