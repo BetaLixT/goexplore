@@ -12,14 +12,21 @@ type GraphHelper struct {
 	TenantId string
 	ClientId string
 	secret   string
+	client *msgraphsdk.GraphServiceClient
 }
 
-func NewGraphHelper(tenantId string, clientId string, secret string) (graphHelper *GraphHelper) {
+func NewGraphHelper(tenantId string, clientId string, secret string) (graphHelper *GraphHelper, e error) {
 	graphHelper = &GraphHelper{}
+	
+	err := graphHelper.generateApplicationCredentialClient()
+	if err == nil {
+		e = fmt.Errorf("[ERR]Failed to generate graph client %s", err)
+		return
+	}
 	return
 }
 
-func (graphHelper *GraphHelper) getApplicationCredentialClient() (client *msgraphsdk.GraphServiceClient, e error) {
+func (graphHelper *GraphHelper) generateApplicationCredentialClient() (e error) {
 
 	options := new(azidentity.ClientSecretCredentialOptions)
 
@@ -49,7 +56,7 @@ func (graphHelper *GraphHelper) getApplicationCredentialClient() (client *msgrap
 		return
 	}
 
-	client = msgraphsdk.NewGraphServiceClient(adapter)
+	(*graphHelper).client = msgraphsdk.NewGraphServiceClient(adapter)
 
 	return
 }
