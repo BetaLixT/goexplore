@@ -1,4 +1,4 @@
-module ms-graph-calls
+module msgraphcalls
 
 go 1.17
 

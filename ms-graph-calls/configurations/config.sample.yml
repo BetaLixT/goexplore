@@ -1,0 +1,4 @@
+msGraphOptions:
+  tenantId: <<tenantId>>
+  clientId: <<clientId>>
+  clientSecret: <<clientSecret>>

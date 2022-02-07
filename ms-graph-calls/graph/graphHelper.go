@@ -8,6 +8,12 @@ import (
 	msgraphsdk "github.com/microsoftgraph/msgraph-sdk-go"
 )
 
+
+type MSGraphOptions struct {
+	TenantId string
+	ClientId string
+	Secret string
+}
 type GraphHelper struct {
 	TenantId string
 	ClientId string
@@ -15,8 +21,12 @@ type GraphHelper struct {
 	client *msgraphsdk.GraphServiceClient
 }
 
-func NewGraphHelper(tenantId string, clientId string, secret string) (graphHelper *GraphHelper, e error) {
-	graphHelper = &GraphHelper{}
+func NewGraphHelper(msGraphOptions MSGraphOptions) (graphHelper *GraphHelper, e error) {
+	graphHelper = &GraphHelper{
+		TenantId: msGraphOptions.TenantId,
+		ClientId: msGraphOptions.ClientId,
+		secret: msGraphOptions.Secret,
+	}
 	
 	err := graphHelper.generateApplicationCredentialClient()
 	if err == nil {
