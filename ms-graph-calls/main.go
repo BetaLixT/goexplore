@@ -2,19 +2,43 @@ package main
 
 import (
 	"fmt"
+	"os"
 
-	azidentity "github.com/Azure/azure-sdk-for-go/sdk/azidentity"
-	"github.com/spf13/viper"
 	graph "msgraphcalls/graph"
+	graphHelper "msgraphcalls/graph"
+	"github.com/spf13/viper"
 )
 
 func main(){
 	
+	loadConfig()
+
 	var msGraphOptions graph.MSGraphOptions
-	err := viper.Sub("msGraphOptions").Unmarshal(&msGraphOptions)
-	if err != nil {
-		fmt.Printf("[ERR] Failed to unmarshal SampleOption: %v", err)
+	msGraphOptionsSub := viper.Sub("msGraphOptions")
+	if msGraphOptionsSub == nil {
+		fmt.Printf("[ERR] failed to fetch required options\n")
+		os.Exit(1)
 	}
+
+	err := msGraphOptionsSub.Unmarshal(&msGraphOptions)
+	if err != nil {
+		fmt.Println(err)
+		fmt.Printf("[ERR] Failed to unmarshal SampleOption: %v", err)
+		os.Exit(1)
+	}
+	graphHelper, err := graphHelper.NewGraphHelper(msGraphOptions)
+	if err != nil {
+		fmt.Println(err)
+		fmt.Printf("[ERR] Failed to create graph helper")
+		os.Exit(1)
+	}
+	user, err := graphHelper.GetUser("alphin@cxunicorn.com")
+	if err != nil {
+		fmt.Println(err)
+		fmt.Printf("[ERR] Failed to fetch users")
+		os.Exit(1)
+	}
+	fmt.Printf("User: %s\n", *user.GetDisplayName())
 }
 
 func loadConfig() {

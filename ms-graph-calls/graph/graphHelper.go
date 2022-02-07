@@ -6,6 +6,7 @@ import (
 	"github.com/Azure/azure-sdk-for-go/sdk/azidentity"
 	azure "github.com/microsoft/kiota/authentication/go/azure"
 	msgraphsdk "github.com/microsoftgraph/msgraph-sdk-go"
+	"github.com/microsoftgraph/msgraph-sdk-go/models/microsoft/graph"
 )
 
 
@@ -21,6 +22,11 @@ type GraphHelper struct {
 	client *msgraphsdk.GraphServiceClient
 }
 
+func (graphHelper *GraphHelper) GetUser(userId string) (*graph.User, error) {
+	user, err := (*graphHelper).client.UsersById(userId).Get(nil)
+	return user, err
+} 
+
 func NewGraphHelper(msGraphOptions MSGraphOptions) (graphHelper *GraphHelper, e error) {
 	graphHelper = &GraphHelper{
 		TenantId: msGraphOptions.TenantId,
@@ -29,7 +35,7 @@ func NewGraphHelper(msGraphOptions MSGraphOptions) (graphHelper *GraphHelper, e 
 	}
 	
 	err := graphHelper.generateApplicationCredentialClient()
-	if err == nil {
+	if err != nil {
 		e = fmt.Errorf("[ERR]Failed to generate graph client %s", err)
 		return
 	}
@@ -47,21 +53,21 @@ func (graphHelper *GraphHelper) generateApplicationCredentialClient() (e error) 
 		(*graphHelper).secret,
 		options,
 	)
-	if err == nil {
+	if err != nil {
 		e = fmt.Errorf("[ERR]Failed to generate client credential %s", err)
 		return
 	}
 
 	// - Generating authentication provider
 	auth, err := azure.NewAzureIdentityAuthenticationProvider(cred)
-	if err == nil {
-		e = fmt.Errorf("[ERR]Failed to generate auth provider %s", err)
+	if err != nil {
+		e = fmt.Errorf("[ERR]Failed to generate auth provider %v", err)
 		return
 	}
 
 	// - Generating adapter
 	adapter, err := msgraphsdk.NewGraphRequestAdapter(auth)
-	if err == nil {
+	if err != nil {
 		e = fmt.Errorf("[ERR]Failed to generate adapter %s", err)
 		return
 	}
