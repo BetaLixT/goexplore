@@ -2,15 +2,20 @@ package main
 
 import (
 	"fmt"
+	"os"
 	"time"
 
+	"github.com/joho/godotenv"
 	"github.com/microsoft/ApplicationInsights-Go/appinsights"
 	"github.com/microsoft/ApplicationInsights-Go/appinsights/contracts"
 )
 
 func main() {
 	fmt.Println("vim-go")
-	client := appinsights.NewTelemetryClient("e6ec8366-a80a-46d8-9b32-567f8da4b6f1")
+	godotenv.Load()
+	key := os.Getenv("InstrumentationKey")
+	fmt.Printf("Utilizing key: %s\n", key)
+	client := appinsights.NewTelemetryClient(key)
 
 	appinsights.NewDiagnosticsMessageListener(func(msg string) error {
 		fmt.Printf("[%s] %s\n", time.Now().Format(time.UnixDate), msg)
