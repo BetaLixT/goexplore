@@ -7,4 +7,7 @@ require (
 	github.com/gofrs/uuid v3.3.0+incompatible // indirect
 	github.com/joho/godotenv v1.4.0 // indirect
 	github.com/microsoft/ApplicationInsights-Go v0.4.4 // indirect
+	go.uber.org/atomic v1.7.0 // indirect
+	go.uber.org/multierr v1.6.0 // indirect
+	go.uber.org/zap v1.21.0 // indirect
 )
