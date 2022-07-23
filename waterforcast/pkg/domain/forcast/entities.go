@@ -1,6 +1,7 @@
 package forcast
 
 type Forcast struct {
-  Id    int
-  Title string
+	Id    int
+	Title string
 }
+

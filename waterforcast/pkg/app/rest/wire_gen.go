@@ -7,6 +7,7 @@
 package rest
 
 import (
+	"waterforcast/pkg/domain/forcast/cmds"
 	"waterforcast/pkg/infra/repos"
 )
 
@@ -14,7 +15,9 @@ import (
 
 // InitializeEvent creates an Event. It will error if the Event is staffed with
 // a grumpy greeter.
-func InitializeEvent(phrase string) (*repos.ForcastRepository, error) {
+func InitializeRestApp() (*RestApp, error) {
 	forcastRepository := repos.NewForcastRepository()
-	return forcastRepository, nil
+	addForcastHandler := cmds.NewAddForcastHandler(forcastRepository)
+	restApp := NewRestApp(addForcastHandler)
+	return restApp, nil
 }

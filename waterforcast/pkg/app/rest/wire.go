@@ -19,14 +19,12 @@
 package rest
 
 import (
-	"waterforcast/pkg/infra/repos"
-
 	"github.com/google/wire"
 )
 
 // InitializeEvent creates an Event. It will error if the Event is staffed with
 // a grumpy greeter.
-func InitializeEvent(phrase string) (*repos.ForcastRepository, error) {
+func InitializeRestApp() (*RestApp, error) {
 	wire.Build(dependencySet)
-	return &repos.ForcastRepository{}, nil
+	return &RestApp{}, nil
 }
