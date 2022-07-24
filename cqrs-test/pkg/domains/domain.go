@@ -16,15 +16,15 @@ var DependencySet = wire.NewSet(
 )
 
 type Domain struct {
-  bd beer.BeerDomain
-  fd financial.FinancialDomain
-  rd room.RoomDomain
+  bd *beer.BeerDomain
+  fd *financial.FinancialDomain
+  rd *room.RoomDomain
 }
 
 func NewDomain(
-  bd beer.BeerDomain,
-  fd financial.FinancialDomain,
-  rd room.RoomDomain,
+  bd *beer.BeerDomain,
+  fd *financial.FinancialDomain,
+  rd *room.RoomDomain,
 ) *Domain {
   return &Domain{
     bd: bd,

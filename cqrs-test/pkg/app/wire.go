@@ -24,7 +24,7 @@ import (
 
 // InitializeEvent creates an Event. It will error if the Event is staffed with
 // a grumpy greeter.
-func InitializeRestApp() (*app, error) {
+func InitializeApp() (*app, error) {
 	wire.Build(dependencySet)
 	return &app{}, nil
 }
