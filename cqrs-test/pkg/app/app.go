@@ -113,7 +113,7 @@ func (app *app) startService() {
 
 	// cqrs.Facade is facade for Command and Event buses and processors.
 	// You can use facade, or create buses and processors manually (you can inspire with cqrs.NewFacade)
-	cqrsFacade, err := cqrs.NewFacade(cqrs.FacadeConfig{
+	_, err = cqrs.NewFacade(cqrs.FacadeConfig{
 		GenerateCommandsTopic: func(commandName string) string {
 			// we are using queue RabbitMQ config, so we need to have topic per command type
 			return commandName
@@ -157,8 +157,7 @@ func (app *app) startService() {
 	}
 
 
-	// publish BookRoom commands every second to simulate incoming traffic
-	go publishCommands(cqrsFacade.CommandBus())
+	httpSubscriber.StartHTTPServer()
 
 	// processors are based on router, so they will work when router will start
 	if err := router.Run(context.Background()); err != nil {
