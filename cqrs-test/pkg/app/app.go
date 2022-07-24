@@ -3,18 +3,24 @@ package app
 import (
 	"context"
 	"fmt"
+	"io/ioutil"
 	"time"
 
 	"github.com/ThreeDotsLabs/watermill"
 	"github.com/ThreeDotsLabs/watermill-amqp/v2/pkg/amqp"
+	"github.com/ThreeDotsLabs/watermill-http/pkg/http"
 	"github.com/ThreeDotsLabs/watermill/components/cqrs"
 	"github.com/ThreeDotsLabs/watermill/message"
 	"github.com/ThreeDotsLabs/watermill/message/router/middleware"
+	"github.com/go-chi/chi"
 	"github.com/golang/protobuf/ptypes"
 	"github.com/google/wire"
 	"main.go/inputs"
 	"main.go/pkg/domains"
 	"main.go/pkg/infra"
+	"main.go/pkg/standard"
+
+	stdHttp "net/http"
 )
 
 func Start() {
@@ -53,11 +59,33 @@ func (app *app) startService() {
 	// Detailed RabbitMQ implementation: https://watermill.io/docs/pub-sub-implementations/#rabbitmq-amqp
 	// Commands will be send to queue, because they need to be consumed once.
 	commandsAMQPConfig := amqp.NewDurableQueueConfig(amqpAddress)
+	
 	commandsPublisher, err := amqp.NewPublisher(commandsAMQPConfig, logger)
 	if err != nil {
 		panic(err)
 	}
-	commandsSubscriber, err := amqp.NewSubscriber(commandsAMQPConfig, logger)
+	// commandsSubscriber, err := amqp.NewSubscriber(commandsAMQPConfig, logger)
+	// if err != nil {
+	// 	panic(err)
+	// }
+	httpSubscriber, err := http.NewSubscriber(
+		":8080",
+		http.SubscriberConfig{
+			Router: chi.NewRouter(),
+			UnmarshalMessageFunc: func(
+				topic string,
+				request *stdHttp.Request,
+			) (*message.Message, error) {
+				b, err := ioutil.ReadAll(request.Body)
+				if err != nil {
+					return nil, standard.NewBodyReadingError(err)
+				}
+
+				return message.NewMessage(watermill.NewUUID(), b), nil
+			},
+		},
+		logger,
+	)
 	if err != nil {
 		panic(err)
 	}
@@ -99,7 +127,7 @@ func (app *app) startService() {
 		CommandsPublisher: commandsPublisher,
 		CommandsSubscriberConstructor: func(handlerName string) (message.Subscriber, error) {
 			// we can reuse subscriber, because all commands have separated topics
-			return commandsSubscriber, nil
+			return httpSubscriber, nil
 		},
 		GenerateEventsTopic: func(eventName string) string {
 			// because we are using PubSub RabbitMQ config, we can use one topic for all events
