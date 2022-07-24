@@ -2,9 +2,17 @@ package domains
 
 import (
 	"github.com/ThreeDotsLabs/watermill/components/cqrs"
+	"github.com/google/wire"
 	"main.go/pkg/domains/beer"
 	"main.go/pkg/domains/financial"
 	"main.go/pkg/domains/room"
+)
+
+var DependencySet = wire.NewSet(
+	beer.NewBeerDomain,
+	financial.NewFinancialDomain,
+	room.NewRoomDomain,
+	NewDomain,
 )
 
 type Domain struct {

@@ -9,7 +9,7 @@ type RoomDomain struct {
 
 }
 
-func NewFinancialDomain() *RoomDomain {
+func NewRoomDomain() *RoomDomain {
   return &RoomDomain{}
 }
 
