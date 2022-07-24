@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"io/ioutil"
+	"sync"
 	"time"
 
 	"github.com/ThreeDotsLabs/watermill"
@@ -68,10 +69,11 @@ func (app *app) startService() {
 	// if err != nil {
 	// 	panic(err)
 	// }
+	httpRouter := chi.NewRouter()
 	httpSubscriber, err := http.NewSubscriber(
 		":8080",
 		http.SubscriberConfig{
-			Router: chi.NewRouter(),
+			Router: httpRouter,
 			UnmarshalMessageFunc: func(
 				topic string,
 				request *stdHttp.Request,
@@ -156,13 +158,27 @@ func (app *app) startService() {
 		panic(err)
 	}
 
-
-	httpSubscriber.StartHTTPServer()
+  
+  wg := sync.WaitGroup{}
+  wg.Add(1)
+  go func() {
+  	wg.Done()
+		// HTTP server needs to be started after router is ready.
+		<-router.Running()
+		for _, route := range httpRouter.Routes() {
+  		fmt.Printf(route.Pattern)
+  	}
+  	err := httpSubscriber.StartHTTPServer()
+  	if err != nil {
+  		panic(err)
+  	}
+	}()
 
 	// processors are based on router, so they will work when router will start
 	if err := router.Run(context.Background()); err != nil {
 		panic(err)
 	}
+	wg.Wait()
 }
 
 func publishCommands(commandBus *cqrs.CommandBus) func() {
