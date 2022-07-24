@@ -16,6 +16,14 @@ type OrderBeerHandler struct {
 	eventBus *cqrs.EventBus
 }
 
+func NewOrderBeerHandler(
+	eb *cqrs.EventBus,
+) *OrderBeerHandler {
+	return &OrderBeerHandler{
+		eventBus: eb,
+	}
+}
+
 func (o OrderBeerHandler) HandlerName() string {
 	return "OrderBeerHandler"
 }

@@ -1,4 +1,4 @@
-package room 
+package cmds
 
 import (
 	"context"
@@ -17,6 +17,14 @@ import (
 // When another handler with this command is added to command processor, error will be retuerned.
 type BookRoomHandler struct {
 	eventBus *cqrs.EventBus
+}
+
+func NewBookRoomHandler (
+  eb *cqrs.EventBus,
+) *BookRoomHandler {
+  return &BookRoomHandler{
+    eventBus: eb,
+  }
 }
 
 func (b BookRoomHandler) HandlerName() string {

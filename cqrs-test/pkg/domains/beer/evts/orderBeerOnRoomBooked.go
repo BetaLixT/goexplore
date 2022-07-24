@@ -13,6 +13,14 @@ type OrderBeerOnRoomBooked struct {
 	commandBus *cqrs.CommandBus
 }
 
+func NewOrderBeerOnRoomBooked(
+	cb *cqrs.CommandBus,
+) *OrderBeerOnRoomBooked {
+	return &OrderBeerOnRoomBooked{
+		commandBus: cb,
+	}
+}
+
 func (o OrderBeerOnRoomBooked) HandlerName() string {
 	// this name is passed to EventsSubscriberConstructor and used to generate queue name
 	return "OrderBeerOnRoomBooked"

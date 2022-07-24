@@ -6,10 +6,27 @@ import (
 	"main.go/pkg/domains/beer/evts"
 )
 
-var commandQueries = []cqrs.CommandHandler {
-  &cmds.OrderBeerHandler{},
+type BeerDomain struct {
 }
 
-var eventHandlers = []cqrs.EventHandler {
-  &evts.OrderBeerOnRoomBooked{},
+func NewBeerDomain() *BeerDomain {
+  return &BeerDomain{}
+}
+
+func (b *BeerDomain) RegisterCommandQueryHandlers (
+  cb *cqrs.CommandBus,
+  eb *cqrs.EventBus,
+) []cqrs.CommandHandler {
+  return []cqrs.CommandHandler {
+    cmds.NewOrderBeerHandler(eb),
+  }
+}
+
+func (b *BeerDomain) RegisterEventHandlers (
+  cb *cqrs.CommandBus,
+  eb *cqrs.EventBus,
+) []cqrs.EventHandler {
+  return []cqrs.EventHandler {
+    evts.NewOrderBeerOnRoomBooked(cb),
+  }
 }
