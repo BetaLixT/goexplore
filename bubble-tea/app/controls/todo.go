@@ -26,7 +26,18 @@ func (ctrl *TodoControl) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		switch msg.String() {
 		case "q", "ctrl+c":
 			return ctrl, tea.Quit
+		case "j":
+			ctrl.cursor = (ctrl.cursor + 1) % len(ctrl.data)
+			return ctrl, nil
+		case "k":
+			if ctrl.cursor == 0 {
+				ctrl.cursor = len(ctrl.data) - 1
+			} else {
+				ctrl.cursor = (ctrl.cursor - 1) % len(ctrl.data)
+			}
+			return ctrl, nil
 		}
+		
 	}
 	return ctrl, nil
 }
