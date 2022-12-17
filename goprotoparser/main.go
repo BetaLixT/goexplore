@@ -1,12 +1,13 @@
 package main
 
 import (
-	"encoding/json"
+	// "encoding/json"
 	"flag"
 	"fmt"
 	"os"
 
 	protoparser "github.com/yoheimuta/go-protoparser/v4"
+	"github.com/yoheimuta/go-protoparser/v4/parser"
 )
 
 func run() int {
@@ -25,11 +26,21 @@ func run() int {
 		return 1
 	}
 
-	gotJSON, err := json.MarshalIndent(got, "", "  ")
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "failed to marshal, err %v\n", err)
+	for _, r := range got.ProtoBody {
+		if srv, ok := r.(*parser.Service); ok {
+			for _, x := range srv.ServiceBody {
+				if rpc, ok := x.(*parser.RPC); ok {
+					fmt.Printf("found rpc: %s\n", rpc.RPCName)
+				}
+			}
+		}
 	}
-	fmt.Print(string(gotJSON))
+
+	// gotJSON, err := json.MarshalIndent(got, "", "  ")
+	// if err != nil {
+	// 	fmt.Fprintf(os.Stderr, "failed to marshal, err %v\n", err)
+	// }
+	// fmt.Print(string(gotJSON))
 	return 0
 }
 
