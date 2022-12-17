@@ -1,0 +1,2011 @@
+{
+  "Syntax": {
+    "ProtobufVersion": "proto3",
+    "ProtobufVersionQuote": "'proto3'",
+    "Comments": [
+      {
+        "Raw": "// [START declaration]",
+        "Meta": {
+          "Pos": {
+            "Filename": "",
+            "Offset": 1,
+            "Line": 2,
+            "Column": 1
+          },
+          "LastPos": {
+            "Filename": "",
+            "Offset": 22,
+            "Line": 2,
+            "Column": 22
+          }
+        }
+      }
+    ],
+    "InlineComment": null,
+    "Meta": {
+      "Pos": {
+        "Filename": "",
+        "Offset": 24,
+        "Line": 3,
+        "Column": 1
+      },
+      "LastPos": {
+        "Filename": "",
+        "Offset": 41,
+        "Line": 3,
+        "Column": 18
+      }
+    }
+  },
+  "ProtoBody": [
+    {
+      "Name": "relay",
+      "Comments": null,
+      "InlineComment": null,
+      "Meta": {
+        "Pos": {
+          "Filename": "",
+          "Offset": 43,
+          "Line": 4,
+          "Column": 1
+        },
+        "LastPos": {
+          "Filename": "",
+          "Offset": 56,
+          "Line": 4,
+          "Column": 14
+        }
+      }
+    },
+    {
+      "Modifier": 0,
+      "Location": "\"google/protobuf/timestamp.proto\"",
+      "Comments": null,
+      "InlineComment": null,
+      "Meta": {
+        "Pos": {
+          "Filename": "",
+          "Offset": 59,
+          "Line": 6,
+          "Column": 1
+        },
+        "LastPos": {
+          "Filename": "",
+          "Offset": 99,
+          "Line": 6,
+          "Column": 41
+        }
+      }
+    },
+    {
+      "Modifier": 0,
+      "Location": "\"google/api/annotations.proto\"",
+      "Comments": null,
+      "InlineComment": null,
+      "Meta": {
+        "Pos": {
+          "Filename": "",
+          "Offset": 101,
+          "Line": 7,
+          "Column": 1
+        },
+        "LastPos": {
+          "Filename": "",
+          "Offset": 138,
+          "Line": 7,
+          "Column": 38
+        }
+      }
+    },
+    {
+      "OptionName": "csharp_namespace",
+      "Constant": "\"Google.Protobuf.Examples.AddressBook\"",
+      "Comments": [
+        {
+          "Raw": "// [END declaration]",
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 140,
+              "Line": 8,
+              "Column": 1
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 159,
+              "Line": 8,
+              "Column": 20
+            }
+          }
+        },
+        {
+          "Raw": "// [START csharp_declaration]",
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 162,
+              "Line": 10,
+              "Column": 1
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 190,
+              "Line": 10,
+              "Column": 29
+            }
+          }
+        }
+      ],
+      "InlineComment": null,
+      "Meta": {
+        "Pos": {
+          "Filename": "",
+          "Offset": 192,
+          "Line": 11,
+          "Column": 1
+        },
+        "LastPos": {
+          "Filename": "",
+          "Offset": 256,
+          "Line": 11,
+          "Column": 65
+        }
+      }
+    },
+    {
+      "OptionName": "go_package",
+      "Constant": "\"pkg/app/server/contracts\"",
+      "Comments": [
+        {
+          "Raw": "// [END csharp_declaration]",
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 258,
+              "Line": 12,
+              "Column": 1
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 284,
+              "Line": 12,
+              "Column": 27
+            }
+          }
+        },
+        {
+          "Raw": "// [START go_declaration]",
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 287,
+              "Line": 14,
+              "Column": 1
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 311,
+              "Line": 14,
+              "Column": 25
+            }
+          }
+        }
+      ],
+      "InlineComment": null,
+      "Meta": {
+        "Pos": {
+          "Filename": "",
+          "Offset": 313,
+          "Line": 15,
+          "Column": 1
+        },
+        "LastPos": {
+          "Filename": "",
+          "Offset": 359,
+          "Line": 15,
+          "Column": 47
+        }
+      }
+    },
+    {
+      "MessageName": "UserContext",
+      "MessageBody": [
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "string",
+          "FieldName": "userTypea",
+          "FieldNumber": "1",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 428,
+              "Line": 20,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "string",
+          "FieldName": "id",
+          "FieldNumber": "2",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 452,
+              "Line": 21,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "IsRepeated": true,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "string",
+          "FieldName": "role",
+          "FieldNumber": "3",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 469,
+              "Line": 22,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "IsRepeated": true,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "string",
+          "FieldName": "features",
+          "FieldNumber": "4",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 497,
+              "Line": 23,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        }
+      ],
+      "Comments": [
+        {
+          "Raw": "// [END go_declaration]",
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 361,
+              "Line": 16,
+              "Column": 1
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 383,
+              "Line": 16,
+              "Column": 23
+            }
+          }
+        },
+        {
+          "Raw": "// [START common]",
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 386,
+              "Line": 18,
+              "Column": 1
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 402,
+              "Line": 18,
+              "Column": 17
+            }
+          }
+        }
+      ],
+      "InlineComment": null,
+      "InlineCommentBehindLeftCurly": null,
+      "Meta": {
+        "Pos": {
+          "Filename": "",
+          "Offset": 404,
+          "Line": 19,
+          "Column": 1
+        },
+        "LastPos": {
+          "Filename": "",
+          "Offset": 527,
+          "Line": 24,
+          "Column": 1
+        }
+      }
+    },
+    {
+      "EnumName": "Status",
+      "EnumBody": [
+        {
+          "Ident": "PENDING",
+          "Number": "0",
+          "EnumValueOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 587,
+              "Line": 30,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "Ident": "PROGRESS",
+          "Number": "1",
+          "EnumValueOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 602,
+              "Line": 31,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "Ident": "COMPLETED",
+          "Number": "2",
+          "EnumValueOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 618,
+              "Line": 32,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        }
+      ],
+      "Comments": [
+        {
+          "Raw": "// [END common]",
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 529,
+              "Line": 25,
+              "Column": 1
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 543,
+              "Line": 25,
+              "Column": 15
+            }
+          }
+        },
+        {
+          "Raw": "// [START tasks domain]",
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 546,
+              "Line": 27,
+              "Column": 1
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 568,
+              "Line": 27,
+              "Column": 23
+            }
+          }
+        }
+      ],
+      "InlineComment": null,
+      "InlineCommentBehindLeftCurly": null,
+      "Meta": {
+        "Pos": {
+          "Filename": "",
+          "Offset": 571,
+          "Line": 29,
+          "Column": 1
+        },
+        "LastPos": {
+          "Filename": "",
+          "Offset": 633,
+          "Line": 33,
+          "Column": 1
+        }
+      }
+    },
+    {
+      "MessageName": "CreateTaskCommand",
+      "MessageBody": [
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "UserContext",
+          "FieldName": "user_context",
+          "FieldNumber": "1",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 681,
+              "Line": 37,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "string",
+          "FieldName": "title",
+          "FieldNumber": "2",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 713,
+              "Line": 38,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "string",
+          "FieldName": "description",
+          "FieldNumber": "3",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 733,
+              "Line": 39,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        }
+      ],
+      "Comments": [
+        {
+          "Raw": "// -- Commands",
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 636,
+              "Line": 35,
+              "Column": 1
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 649,
+              "Line": 35,
+              "Column": 14
+            }
+          }
+        }
+      ],
+      "InlineComment": null,
+      "InlineCommentBehindLeftCurly": null,
+      "Meta": {
+        "Pos": {
+          "Filename": "",
+          "Offset": 651,
+          "Line": 36,
+          "Column": 1
+        },
+        "LastPos": {
+          "Filename": "",
+          "Offset": 757,
+          "Line": 40,
+          "Column": 1
+        }
+      }
+    },
+    {
+      "MessageName": "DeleteTaskCommand",
+      "MessageBody": [
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "UserContext",
+          "FieldName": "user_context",
+          "FieldNumber": "1",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 789,
+              "Line": 42,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "string",
+          "FieldName": "id",
+          "FieldNumber": "2",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 821,
+              "Line": 43,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        }
+      ],
+      "Comments": null,
+      "InlineComment": null,
+      "InlineCommentBehindLeftCurly": null,
+      "Meta": {
+        "Pos": {
+          "Filename": "",
+          "Offset": 759,
+          "Line": 41,
+          "Column": 1
+        },
+        "LastPos": {
+          "Filename": "",
+          "Offset": 836,
+          "Line": 44,
+          "Column": 1
+        }
+      }
+    },
+    {
+      "MessageName": "UpdateTaskCommand",
+      "MessageBody": [
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "UserContext",
+          "FieldName": "user_context",
+          "FieldNumber": "1",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 868,
+              "Line": 46,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "string",
+          "FieldName": "id",
+          "FieldNumber": "2",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 900,
+              "Line": 47,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": true,
+          "Type": "string",
+          "FieldName": "title",
+          "FieldNumber": "3",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 917,
+              "Line": 48,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": true,
+          "Type": "string",
+          "FieldName": "description",
+          "FieldNumber": "4",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 946,
+              "Line": 49,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        }
+      ],
+      "Comments": null,
+      "InlineComment": null,
+      "InlineCommentBehindLeftCurly": null,
+      "Meta": {
+        "Pos": {
+          "Filename": "",
+          "Offset": 838,
+          "Line": 45,
+          "Column": 1
+        },
+        "LastPos": {
+          "Filename": "",
+          "Offset": 979,
+          "Line": 50,
+          "Column": 1
+        }
+      }
+    },
+    {
+      "MessageName": "ProgressTaskCommand",
+      "MessageBody": [
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "UserContext",
+          "FieldName": "user_context",
+          "FieldNumber": "1",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 1013,
+              "Line": 52,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "string",
+          "FieldName": "id",
+          "FieldNumber": "2",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 1045,
+              "Line": 53,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        }
+      ],
+      "Comments": null,
+      "InlineComment": null,
+      "InlineCommentBehindLeftCurly": null,
+      "Meta": {
+        "Pos": {
+          "Filename": "",
+          "Offset": 981,
+          "Line": 51,
+          "Column": 1
+        },
+        "LastPos": {
+          "Filename": "",
+          "Offset": 1060,
+          "Line": 54,
+          "Column": 1
+        }
+      }
+    },
+    {
+      "MessageName": "CompleteTaskCommand",
+      "MessageBody": [
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "UserContext",
+          "FieldName": "user_context",
+          "FieldNumber": "1",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 1094,
+              "Line": 56,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "string",
+          "FieldName": "id",
+          "FieldNumber": "2",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 1126,
+              "Line": 57,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        }
+      ],
+      "Comments": null,
+      "InlineComment": null,
+      "InlineCommentBehindLeftCurly": null,
+      "Meta": {
+        "Pos": {
+          "Filename": "",
+          "Offset": 1062,
+          "Line": 55,
+          "Column": 1
+        },
+        "LastPos": {
+          "Filename": "",
+          "Offset": 1141,
+          "Line": 58,
+          "Column": 1
+        }
+      }
+    },
+    {
+      "MessageName": "ListTasksQuery",
+      "MessageBody": [
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "UserContext",
+          "FieldName": "user_context",
+          "FieldNumber": "1",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 1185,
+              "Line": 62,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "uint32",
+          "FieldName": "page_number",
+          "FieldNumber": "2",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 1217,
+              "Line": 63,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "uint32",
+          "FieldName": "count_per_page",
+          "FieldNumber": "3",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 1243,
+              "Line": 64,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        }
+      ],
+      "Comments": [
+        {
+          "Raw": "// -- Queries",
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 1144,
+              "Line": 60,
+              "Column": 1
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 1156,
+              "Line": 60,
+              "Column": 13
+            }
+          }
+        }
+      ],
+      "InlineComment": null,
+      "InlineCommentBehindLeftCurly": null,
+      "Meta": {
+        "Pos": {
+          "Filename": "",
+          "Offset": 1158,
+          "Line": 61,
+          "Column": 1
+        },
+        "LastPos": {
+          "Filename": "",
+          "Offset": 1270,
+          "Line": 65,
+          "Column": 1
+        }
+      }
+    },
+    {
+      "MessageName": "TaskData",
+      "MessageBody": [
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": true,
+          "Type": "string",
+          "FieldName": "title",
+          "FieldNumber": "1",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 1305,
+              "Line": 69,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": true,
+          "Type": "string",
+          "FieldName": "description",
+          "FieldNumber": "2",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 1334,
+              "Line": 70,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": true,
+          "Type": "Status",
+          "FieldName": "status",
+          "FieldNumber": "3",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 1369,
+              "Line": 71,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        }
+      ],
+      "Comments": [
+        {
+          "Raw": "// -- Data",
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 1273,
+              "Line": 67,
+              "Column": 1
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 1282,
+              "Line": 67,
+              "Column": 10
+            }
+          }
+        }
+      ],
+      "InlineComment": null,
+      "InlineCommentBehindLeftCurly": null,
+      "Meta": {
+        "Pos": {
+          "Filename": "",
+          "Offset": 1284,
+          "Line": 68,
+          "Column": 1
+        },
+        "LastPos": {
+          "Filename": "",
+          "Offset": 1397,
+          "Line": 72,
+          "Column": 1
+        }
+      }
+    },
+    {
+      "MessageName": "TaskEvent",
+      "MessageBody": [
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "uint64",
+          "FieldName": "id",
+          "FieldNumber": "1",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 1422,
+              "Line": 75,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": true,
+          "Type": "string",
+          "FieldName": "saga_id",
+          "FieldNumber": "2",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 1439,
+              "Line": 76,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "string",
+          "FieldName": "stream",
+          "FieldNumber": "3",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 1470,
+              "Line": 77,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "string",
+          "FieldName": "stream_id",
+          "FieldNumber": "4",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 1491,
+              "Line": 78,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "uint64",
+          "FieldName": "version",
+          "FieldNumber": "5",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 1515,
+              "Line": 79,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "string",
+          "FieldName": "event",
+          "FieldNumber": "6",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 1537,
+              "Line": 80,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "google.protobuf.Timestamp",
+          "FieldName": "event_time",
+          "FieldNumber": "7",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 1557,
+              "Line": 81,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "TaskData",
+          "FieldName": "data",
+          "FieldNumber": "8",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 1601,
+              "Line": 82,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        }
+      ],
+      "Comments": null,
+      "InlineComment": null,
+      "InlineCommentBehindLeftCurly": null,
+      "Meta": {
+        "Pos": {
+          "Filename": "",
+          "Offset": 1400,
+          "Line": 74,
+          "Column": 1
+        },
+        "LastPos": {
+          "Filename": "",
+          "Offset": 1620,
+          "Line": 83,
+          "Column": 1
+        }
+      }
+    },
+    {
+      "MessageName": "TaskEntity",
+      "MessageBody": [
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "string",
+          "FieldName": "id",
+          "FieldNumber": "1",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 1646,
+              "Line": 86,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "uint64",
+          "FieldName": "version",
+          "FieldNumber": "2",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 1663,
+              "Line": 87,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "string",
+          "FieldName": "title",
+          "FieldNumber": "3",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 1685,
+              "Line": 88,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "string",
+          "FieldName": "description",
+          "FieldNumber": "4",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 1705,
+              "Line": 89,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "Status",
+          "FieldName": "status",
+          "FieldNumber": "5",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 1731,
+              "Line": 90,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "google.protobuf.Timestamp",
+          "FieldName": "created_date_time",
+          "FieldNumber": "6",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 1752,
+              "Line": 91,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        },
+        {
+          "IsRepeated": false,
+          "IsRequired": false,
+          "IsOptional": false,
+          "Type": "google.protobuf.Timestamp",
+          "FieldName": "updated_date_time",
+          "FieldNumber": "7",
+          "FieldOptions": null,
+          "Comments": null,
+          "InlineComment": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 1803,
+              "Line": 92,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 0,
+              "Line": 0,
+              "Column": 0
+            }
+          }
+        }
+      ],
+      "Comments": null,
+      "InlineComment": null,
+      "InlineCommentBehindLeftCurly": null,
+      "Meta": {
+        "Pos": {
+          "Filename": "",
+          "Offset": 1623,
+          "Line": 85,
+          "Column": 1
+        },
+        "LastPos": {
+          "Filename": "",
+          "Offset": 1853,
+          "Line": 93,
+          "Column": 1
+        }
+      }
+    },
+    {
+      "ServiceName": "TaskService",
+      "ServiceBody": [
+        {
+          "RPCName": "Create",
+          "RPCRequest": {
+            "IsStream": false,
+            "MessageType": "CreateTaskCommand",
+            "Meta": {
+              "Pos": {
+                "Filename": "",
+                "Offset": 1923,
+                "Line": 99,
+                "Column": 13
+              },
+              "LastPos": {
+                "Filename": "",
+                "Offset": 0,
+                "Line": 0,
+                "Column": 0
+              }
+            }
+          },
+          "RPCResponse": {
+            "IsStream": false,
+            "MessageType": "TaskEvent",
+            "Meta": {
+              "Pos": {
+                "Filename": "",
+                "Offset": 1951,
+                "Line": 99,
+                "Column": 41
+              },
+              "LastPos": {
+                "Filename": "",
+                "Offset": 0,
+                "Line": 0,
+                "Column": 0
+              }
+            }
+          },
+          "Options": null,
+          "Comments": [
+            {
+              "Raw": "// --- Commands",
+              "Meta": {
+                "Pos": {
+                  "Filename": "",
+                  "Offset": 1895,
+                  "Line": 98,
+                  "Column": 3
+                },
+                "LastPos": {
+                  "Filename": "",
+                  "Offset": 1909,
+                  "Line": 98,
+                  "Column": 17
+                }
+              }
+            }
+          ],
+          "InlineComment": null,
+          "InlineCommentBehindLeftCurly": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 1913,
+              "Line": 99,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 1965,
+              "Line": 99,
+              "Column": 55
+            }
+          }
+        },
+        {
+          "RPCName": "Delete",
+          "RPCRequest": {
+            "IsStream": false,
+            "MessageType": "DeleteTaskCommand",
+            "Meta": {
+              "Pos": {
+                "Filename": "",
+                "Offset": 1979,
+                "Line": 100,
+                "Column": 13
+              },
+              "LastPos": {
+                "Filename": "",
+                "Offset": 0,
+                "Line": 0,
+                "Column": 0
+              }
+            }
+          },
+          "RPCResponse": {
+            "IsStream": false,
+            "MessageType": "TaskEvent",
+            "Meta": {
+              "Pos": {
+                "Filename": "",
+                "Offset": 2007,
+                "Line": 100,
+                "Column": 41
+              },
+              "LastPos": {
+                "Filename": "",
+                "Offset": 0,
+                "Line": 0,
+                "Column": 0
+              }
+            }
+          },
+          "Options": null,
+          "Comments": null,
+          "InlineComment": null,
+          "InlineCommentBehindLeftCurly": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 1969,
+              "Line": 100,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 2021,
+              "Line": 100,
+              "Column": 55
+            }
+          }
+        },
+        {
+          "RPCName": "Update",
+          "RPCRequest": {
+            "IsStream": false,
+            "MessageType": "UpdateTaskCommand",
+            "Meta": {
+              "Pos": {
+                "Filename": "",
+                "Offset": 2035,
+                "Line": 101,
+                "Column": 13
+              },
+              "LastPos": {
+                "Filename": "",
+                "Offset": 0,
+                "Line": 0,
+                "Column": 0
+              }
+            }
+          },
+          "RPCResponse": {
+            "IsStream": false,
+            "MessageType": "TaskEvent",
+            "Meta": {
+              "Pos": {
+                "Filename": "",
+                "Offset": 2063,
+                "Line": 101,
+                "Column": 41
+              },
+              "LastPos": {
+                "Filename": "",
+                "Offset": 0,
+                "Line": 0,
+                "Column": 0
+              }
+            }
+          },
+          "Options": null,
+          "Comments": null,
+          "InlineComment": null,
+          "InlineCommentBehindLeftCurly": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 2025,
+              "Line": 101,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 2077,
+              "Line": 101,
+              "Column": 55
+            }
+          }
+        },
+        {
+          "RPCName": "Progress",
+          "RPCRequest": {
+            "IsStream": false,
+            "MessageType": "ProgressTaskCommand",
+            "Meta": {
+              "Pos": {
+                "Filename": "",
+                "Offset": 2093,
+                "Line": 102,
+                "Column": 15
+              },
+              "LastPos": {
+                "Filename": "",
+                "Offset": 0,
+                "Line": 0,
+                "Column": 0
+              }
+            }
+          },
+          "RPCResponse": {
+            "IsStream": false,
+            "MessageType": "TaskEvent",
+            "Meta": {
+              "Pos": {
+                "Filename": "",
+                "Offset": 2123,
+                "Line": 102,
+                "Column": 45
+              },
+              "LastPos": {
+                "Filename": "",
+                "Offset": 0,
+                "Line": 0,
+                "Column": 0
+              }
+            }
+          },
+          "Options": null,
+          "Comments": null,
+          "InlineComment": null,
+          "InlineCommentBehindLeftCurly": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 2081,
+              "Line": 102,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 2137,
+              "Line": 102,
+              "Column": 59
+            }
+          }
+        },
+        {
+          "RPCName": "Complete",
+          "RPCRequest": {
+            "IsStream": false,
+            "MessageType": "CompleteTaskCommand",
+            "Meta": {
+              "Pos": {
+                "Filename": "",
+                "Offset": 2153,
+                "Line": 103,
+                "Column": 15
+              },
+              "LastPos": {
+                "Filename": "",
+                "Offset": 0,
+                "Line": 0,
+                "Column": 0
+              }
+            }
+          },
+          "RPCResponse": {
+            "IsStream": false,
+            "MessageType": "TaskEvent",
+            "Meta": {
+              "Pos": {
+                "Filename": "",
+                "Offset": 2183,
+                "Line": 103,
+                "Column": 45
+              },
+              "LastPos": {
+                "Filename": "",
+                "Offset": 0,
+                "Line": 0,
+                "Column": 0
+              }
+            }
+          },
+          "Options": null,
+          "Comments": null,
+          "InlineComment": null,
+          "InlineCommentBehindLeftCurly": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 2141,
+              "Line": 103,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 2197,
+              "Line": 103,
+              "Column": 59
+            }
+          }
+        },
+        {
+          "RPCName": "ListQuery",
+          "RPCRequest": {
+            "IsStream": false,
+            "MessageType": "ListTasksQuery",
+            "Meta": {
+              "Pos": {
+                "Filename": "",
+                "Offset": 2232,
+                "Line": 106,
+                "Column": 16
+              },
+              "LastPos": {
+                "Filename": "",
+                "Offset": 0,
+                "Line": 0,
+                "Column": 0
+              }
+            }
+          },
+          "RPCResponse": {
+            "IsStream": false,
+            "MessageType": "TaskEntity",
+            "Meta": {
+              "Pos": {
+                "Filename": "",
+                "Offset": 2257,
+                "Line": 106,
+                "Column": 41
+              },
+              "LastPos": {
+                "Filename": "",
+                "Offset": 0,
+                "Line": 0,
+                "Column": 0
+              }
+            }
+          },
+          "Options": null,
+          "Comments": [
+            {
+              "Raw": "// --- Queries",
+              "Meta": {
+                "Pos": {
+                  "Filename": "",
+                  "Offset": 2202,
+                  "Line": 105,
+                  "Column": 3
+                },
+                "LastPos": {
+                  "Filename": "",
+                  "Offset": 2215,
+                  "Line": 105,
+                  "Column": 16
+                }
+              }
+            }
+          ],
+          "InlineComment": null,
+          "InlineCommentBehindLeftCurly": null,
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 2219,
+              "Line": 106,
+              "Column": 3
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 2272,
+              "Line": 106,
+              "Column": 56
+            }
+          }
+        }
+      ],
+      "Comments": [
+        {
+          "Raw": "// -- Service",
+          "Meta": {
+            "Pos": {
+              "Filename": "",
+              "Offset": 1856,
+              "Line": 95,
+              "Column": 1
+            },
+            "LastPos": {
+              "Filename": "",
+              "Offset": 1868,
+              "Line": 95,
+              "Column": 13
+            }
+          }
+        }
+      ],
+      "InlineComment": null,
+      "InlineCommentBehindLeftCurly": null,
+      "Meta": {
+        "Pos": {
+          "Filename": "",
+          "Offset": 1870,
+          "Line": 96,
+          "Column": 1
+        },
+        "LastPos": {
+          "Filename": "",
+          "Offset": 2274,
+          "Line": 107,
+          "Column": 1
+        }
+      }
+    }
+  ],
+  "Meta": {
+    "Filename": ""
+  }
+}
