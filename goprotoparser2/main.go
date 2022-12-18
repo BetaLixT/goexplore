@@ -8,6 +8,8 @@ import (
 
 	"google.golang.org/protobuf/compiler/protogen"
 	"google.golang.org/protobuf/types/pluginpb"
+	"google.golang.org/protobuf/types/descriptorpb"
+
 )
 
 
@@ -68,10 +70,24 @@ func main() {
 	minor := int32(19)
 	patch := int32(4)
 
+
+	// wanted to just compile it directly here and test,
+	// unsure if that's really possible atm, need to look into
+	file := descriptorpb.FileDescriptorProto {
+		Name: nil,
+		Package: nil,
+		Dependency: nil,
+		PublicDependency: nil,
+		WeakDependency: nil,
+		MessageType: nil,
+		EnumType: nil,
+		
+	}
+	files := []*descriptorpb.FileDescriptorProto{&file}
 	req := pluginpb.CodeGeneratorRequest{
 		FileToGenerate: []string{"contracts.proto"},
 		Parameter: nil,
-		ProtoFile: nil,
+		ProtoFile: files,
 		CompilerVersion: &pluginpb.Version{
 			Major: &major,
 			Minor: &minor,
