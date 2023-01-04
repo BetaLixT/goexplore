@@ -96,14 +96,27 @@ message TaskEntity {
 service TaskService {
 
   // --- Commands
-  rpc Create(CreateTaskCommand) returns (TaskEvent) {};
-  rpc Delete(DeleteTaskCommand) returns (TaskEvent) {};
-  rpc Update(UpdateTaskCommand) returns (TaskEvent) {};
-  rpc Progress(ProgressTaskCommand) returns (TaskEvent) {};
-  rpc Complete(CompleteTaskCommand) returns (TaskEvent) {};
+  rpc Create(CreateTaskCommand) returns (TaskEvent) {
+    option (google.api.http).post = "/v1/tasks";
+  };
+  rpc Delete(DeleteTaskCommand) returns (TaskEvent) {
+    option (google.api.http).delete = "/v1/tasks/{id}";
+  };
+  rpc Update(UpdateTaskCommand) returns (TaskEvent) {
+    option (google.api.http).patch = "/v1/tasks/{id}";
+  };
+  rpc Progress(ProgressTaskCommand) returns (TaskEvent) {
+    option (google.api.http).post = "/v1/tasks/{id}/progress";
+  };
+  rpc Complete(CompleteTaskCommand) returns (TaskEvent) {
+    option (google.api.http).post = "/v1/tasks/{id}/complete";
+  };
 
   // --- Queries
-  rpc ListQuery(ListTasksQuery) returns (TaskEntity) {};
+  rpc ListQuery(ListTasksQuery) returns (TaskEntity) {
+    option (google.api.http).get = "/v1/tasks";
+  };
 }
 
 // [END tasks domain]
+
