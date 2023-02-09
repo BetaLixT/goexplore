@@ -16,6 +16,10 @@ func (h *MyHandler) HandleFastHTTP(ctx *fasthttp.RequestCtx) {
 	fmt.Fprintf(ctx, "Hello, world! Requested path is %q. Foobar is %q",
 		ctx.Path(), h.foobar)
 	fmt.Fprintf(ctx, "RequestURI is %q", ctx.RequestURI())
+
+	switch "" {
+	case "":
+	}
 }
 
 func main() {
