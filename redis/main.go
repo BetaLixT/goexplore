@@ -30,6 +30,7 @@ func main() {
 	if err != nil {
 		println("failure lmao")
 	}
+	er()
 	for idx := range res {
 		dur, ok :=  (res[idx]).(*redis.DurationCmd)
 		if !ok {
@@ -43,6 +44,10 @@ func main() {
 }
 
 type Client struct {
+}
+
+func er() error {
+	return nil
 }
 
 type cmdable func(ctx context.Context, str string) error
